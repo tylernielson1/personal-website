@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home - Tyler Nielson</title>
         <link href="static/css/bootstrap.min.css" rel="stylesheet">
-        <link href="http://www.w3schools.com/lib/w3.css">
+        <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
+        <link href="static/css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -15,30 +17,37 @@
     <body>
 
         <!-- Navbar -->
-        <nav class="navbar navbar-transparent navbar-static-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li><a href="#" style="color:darkred;font-size:150%;">Home</a></li>
-                        <li><a href="#">About Me</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+        <div class="w3-top" style="color:white">
+            <ul class="w3-navbar" id="myNav">
+                <li><a href="#" class="w3-padding-large">HOME</a></li>
+                <li class="w3-hide-small"><a href="#" class="w3-padding-large">ABOUT ME</a></li>
+                <li class="w3-hide-small"><a href="#" class="w3-padding-large">RESUME</a></li>
+                <li class="w3-hide-small"><a href="#" class="w3-padding-large">BLOG</a></li>
+                <li class="w3-hide-small"><a href="#" class="w3-padding-large">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <header class="parallax-1 w3-display-container" id="home">
+            <div class="w3-display-middle w3-padding-large w3-text-white w3-animate-opacity w3-center" style="background-color:rgba(0,0,0, 0.5);">
+                <h1 class="title w3-hide-medium w3-hide-small w3-xxxlarge" style=font-family:'Ubuntu',sans-serif;><b>TYLER NIELSON</b></h1>
+                <h3 class="title w3-hide-medium w3-hide-small" style=font-family:'Ubuntu',sans-serif;>SOFTWARE ENGINEER</h3>
+                <h4 class="title w3-hide-medium w3-hide-small" style=font-family:'Ubuntu',sans-serif;>WEB DEVELOPER</h4>
+                <h5 class="w3-hide-large" style="white-space:nowrap;" style=font-family:'Ubuntu',sans-serif;><b>TYLER NIELSON</b></h5>
             </div>
-        </nav>
-        <h1>Hello, world!</h1>
+        </header>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
+
+        <script>
+            window.onscroll = function() {navBarFunction()};
+            function navBarFunction() {
+                var navbar = document.getElementById("myNav");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+
+                }
+            }
+        </script>
+
     </body>
 </html>

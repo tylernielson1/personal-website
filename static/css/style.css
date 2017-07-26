@@ -1,0 +1,25 @@
+/* creating the parallax */
+.parallax-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-1 {
+    opacity: 0.9;
+    min-height: 100%;
+    background-image: url('images/kc.jpg');
+}
+
+body, html {
+    height: 100%;
+    /*color: #777;*/
+    line-height: 1.8;
+    font-family: "Lato", sans-serif;
+
+    /* Hide URL bar */
+    /*overflow: hidden;
+    overflow-y: scroll;*/
+    -webkit-overflow-scrolling:touch;
+}
