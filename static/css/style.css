@@ -1,5 +1,5 @@
 /* creating the parallax */
-.parallax-1 {
+.parallax-1, .parallax2, .parallax-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,6 +10,12 @@
     opacity: 0.9;
     min-height: 100%;
     background-image: url('images/kc.jpg');
+}
+
+.parallax-2 {
+    opacity: 0.8;
+    height: 900px;
+    background-image: url('images/award.jpg')
 }
 
 body, html {

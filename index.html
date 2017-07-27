@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home - Tyler Nielson</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="static/css/bootstrap.min.css" rel="stylesheet">
         <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
         <link href="static/css/style.css" rel="stylesheet">
@@ -20,34 +21,66 @@
         <div class="w3-top" style="color:white">
             <ul class="w3-navbar" id="myNav">
                 <li><a href="#" class="w3-padding-large">HOME</a></li>
-                <li class="w3-hide-small"><a href="#" class="w3-padding-large">ABOUT ME</a></li>
-                <li class="w3-hide-small"><a href="#" class="w3-padding-large">RESUME</a></li>
-                <li class="w3-hide-small"><a href="#" class="w3-padding-large">BLOG</a></li>
-                <li class="w3-hide-small"><a href="#" class="w3-padding-large">CONTACT</a></li>
+                <li class="w3-hide-small"><a href="about.html" class="w3-padding-large">ABOUT ME</a></li>
+                <li class="w3-hide-small"><a href="resume.html" class="w3-padding-large">RESUME</a></li>
+                <li class="w3-hide-small"><a href="blog.html" class="w3-padding-large">BLOG</a></li>
+                <li class="w3-hide-small"><a href="contact.html" class="w3-padding-large">CONTACT</a></li>
             </ul>
         </div>
 
+        <!-- Nameplate -->
         <header class="parallax-1 w3-display-container" id="home">
             <div class="w3-display-middle w3-padding-large w3-text-white w3-animate-opacity w3-center" style="background-color:rgba(0,0,0, 0.5);">
                 <h1 class="title w3-hide-medium w3-hide-small w3-xxxlarge" style=font-family:'Ubuntu',sans-serif;><b>TYLER NIELSON</b></h1>
                 <h3 class="title w3-hide-medium w3-hide-small" style=font-family:'Ubuntu',sans-serif;>SOFTWARE ENGINEER</h3>
-                <h4 class="title w3-hide-medium w3-hide-small" style=font-family:'Ubuntu',sans-serif;>WEB DEVELOPER</h4>
+                <h4 class="title w3-hide-medium w3-hide-small" style=font-family:'Ubuntu',sans-serif;>STUDENT</h4>
                 <h5 class="w3-hide-large" style="white-space:nowrap;" style=font-family:'Ubuntu',sans-serif;><b>TYLER NIELSON</b></h5>
             </div>
         </header>
 
+        <!-- Container  -->
+        <div class="w3-content w3-container w3-padding-64 w3-light-grey" style="font-size:24px">
+
+            <!-- Intro (Large Screens) -->
+            <div class = "w3-left w3-container w3-hide-small w3-light-grey">
+                <div class = "w3-row">
+                    <div class="w3-third m4 l3 w3-center w3-light-grey">
+                        <img src = "static/css/images/tyler.jpeg" style="float:left;" width="95%">
+                    </div>
+                    <div class="w3-rest m8 l9 w3-light-grey" style="top:20px; right:-50px; left:-5px; position:relative">
+                        <h1> <b>  A Little About Me </b> </h1>
+                        <p>Hello, my name is Tyler Nielson. I am currently a senior at Kansas State University who is studying Software Engineering. I am set to graduate in May 2018 after four great years of schooling. I enjoy expanding my knowledge about programming and spend a lot of my time exploring different languages. If you want to learn more about me, visit my <a href="about.html">about me</a> page</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Intro (Small Screens) -->
+            <div class="w3-hide-large w3-center w3-hide-medium">
+                <img src="static/css/images/tyler.jpeg" width="75%">
+                <h2> <b> A Little About Me </b> </h2>
+                <p>Hello, my name is Tyler Nielson. I am currently a senior at Kansas State University who is studying Software Engineering. I am set to graduate in May 2018 after four great years of schooling. I enjoy expanding my knowledge about programming and spend a lot of my time exploring different languages. If you want to learn more about me, visit my <a href="about.html">about me</a> page</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="w3-content w3-container w3-center">
+            <footer>
+                <!-- Copyright -->
+                Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 tylernielson.net
+                <br>
+                 Site design by Tyler Nielson
+                <br>
+            <!-- Social Media Buttons -->
+                <a href="https://www.github.com/tylernielson1"><i class="fa fa-github" style="font-size:24px; padding-right:5px;"></i></a>
+                <a href="https://www.linkedin.com/in/tyler-nielson-a37143106"><i class="fa fa-linkedin" style="font-size:24px; padding-right:5px; padding-left:5px;"></i></a>
+                <a href="contact.html"><i class="fa fa-envelope" style="font-size:24px;padding-left:5px;"></i></a>
+            </footer>
+        </div>
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
-
-        <script>
-            window.onscroll = function() {navBarFunction()};
-            function navBarFunction() {
-                var navbar = document.getElementById("myNav");
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-
-                }
-            }
-        </script>
 
     </body>
 </html>
