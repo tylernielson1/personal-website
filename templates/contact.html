@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - Tyler Nielson</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="w3-top w3-light-grey" style="color:black">
+        <ul class="w3-navbar" id="myNav">
+            <li><a href="index.html" class="w3-padding-large">HOME</a></li>
+            <li class="w3-hide-small"><a href="about.html" class="w3-padding-large">ABOUT ME</a></li>
+            <li class="w3-hide-small"><a href="resume.html" class="w3-padding-large">RESUME</a></li>
+            <li class="w3-hide-small"><a href="blog.html" class="w3-padding-large">BLOG</a></li>
+            <li class="w3-hide-small w3-disabled"><a href="contact.html" class="w3-padding-large">CONTACT</a></li>
+        </ul>
+    </div>
+    <div class="w3-content w3-container w3-padding-64">
+        <h3 class="w3-center">CONTACT ME</h3>
+        <p class="w3-center"><em>I'd love to hear from you!</em></p>
+
+        <div class="w3-large w3-margin-bottom w3-center">
+            <i class="fa fa-envelope w3-hover-text-black" style="width:30px"> </i><a href="mailto:tyler.snielson@gmail.com">Email: tyler.snielson@gmail.com</a>
+        </div>
+
+        {% if success %}
+        <p class="w3-center">Thank you for your message. I'll get back to you as soon as possible.</p>
+
+        {% else %}
+
+        {% for message in form.name.errors %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.email.errors %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        {% for message in form.message.errors %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
+
+        <form action="/contact" method="post" class="w3-center w3-container">
+            {{ form.hidden_tag() }}
+
+            <p>
+                {{ form.name.label }}
+                {{ form.name }}
+            </p>
+            <p>
+                {{ form.email.label }}
+                {{ form.email }}
+            </p>
+            <p>
+                {{ form.message.label }}
+                {{ form.message }}
+            </p>
+            <p>
+                {{ form.submit }}
+            </p>
+        </form>
+
+        {% endif %}
+    </div>
+
+    <div class="w3-content w3-container w3-center">
+        <footer>
+            <!-- Copyright -->
+            Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 tylernielson.net
+            <br>
+            Site design by Tyler Nielson
+            <br>
+            <!-- Social Media Buttons -->
+            <a href="https://www.github.com/tylernielson1"><i class="fa fa-github" style="font-size:24px; padding-right:5px;"></i></a>
+            <a href="https://www.linkedin.com/in/tyler-nielson-a37143106"><i class="fa fa-linkedin" style="font-size:24px; padding-right:5px; padding-left:5px;"></i></a>
+            <a href="contact.html"><i class="fa fa-envelope" style="font-size:24px;padding-left:5px;"></i></a>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -18,6 +18,17 @@
     background-image: url('images/award.jpg')
 }
 
+.parallax-3 {
+    opacity: 0.8;
+    height: 900px;
+    background-image: url('images/scholar.jpg')
+}
+
+.parallax-4 {
+    height: 200px;
+    background-color: grey;
+}
+
 body, html {
     height: 100%;
     /*color: #777;*/
