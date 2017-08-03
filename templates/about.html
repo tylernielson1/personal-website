@@ -43,11 +43,11 @@
     <body>
         <div class="w3-top" style="color:black">
             <ul class="w3-navbar" id="myNav">
-                <li><a href="index.html" class="w3-padding-large">HOME</a></li>
-                <li class="w3-hide-small w3-disabled"><a href="about.html" class="w3-padding-large">ABOUT ME</a></li>
-                <li class="w3-hide-small"><a href="resume.html" class="w3-padding-large">RESUME</a></li>
-                <li class="w3-hide-small"><a href="blog.html" class="w3-padding-large">BLOG</a></li>
-                <li class="w3-hide-small"><a href="contact.html" class="w3-padding-large">CONTACT</a></li>
+                <li><a href="{{ url_for('home') }}" class="w3-padding-large">HOME</a></li>
+                <li class="w3-hide-small w3-disabled"><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
+                <li class="w3-hide-small"><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
+                <li class="w3-hide-small"><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
+                <li class="w3-hide-small"><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
             </ul>
         </div>
 

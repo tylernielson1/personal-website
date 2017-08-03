@@ -38,7 +38,7 @@ def contact():
 
 @app.route('/about')
 def projects():
-    return render_template('/projects.html')
+    return render_template('/about.html')
 
 @app.route('/blog')
 def blog():
