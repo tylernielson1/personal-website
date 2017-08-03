@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash
-from flask_mail imoport Mail, Message
+from flask_mail import Mail, Message
 from forms import ContactForm
 
 app = Flask(__name__)
@@ -12,9 +12,11 @@ app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = 'devemail@gmail.com'
 app.config['MAIL_PASSWORD'] = 'testtesttest'
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
 
 @app.route('/contact', methods=('GET', 'POST"'))
 def contact():
@@ -22,7 +24,7 @@ def contact():
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('contact.html', form=form)
+            return render_template('/contact.html', form=form)
         else:
             msg = Message("You have a message from a visitor to your site: " + form.name.data,
                           sender='YourUser@NameHere',
@@ -32,17 +34,20 @@ def contact():
             %s
             """ % (form.name.data, form.email.data, form.message.data)
             mail.send(msg)
-            return render_template('contact.html', success=True, form=form)
+            return render_template('/contact.html', success=True, form=form)
     elif request.method == 'GET':
-        return render_template('contact.html', form=form)
+        return render_template('/contact.html', form=form)
+
 
 @app.route('/about')
-def projects():
+def about():
     return render_template('/about.html')
+
 
 @app.route('/blog')
 def blog():
     return render_template('/blog.html')
+
 
 @app.route('/resume')
 def resume():
