@@ -15,7 +15,7 @@ app.config['MAIL_PASSWORD'] = 'testtesttest'
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('/index.html')
 
 
 @app.route('/contact', methods=('GET', 'POST"'))
