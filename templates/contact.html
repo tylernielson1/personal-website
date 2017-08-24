@@ -16,15 +16,27 @@
     <![endif]-->
 </head>
 <body>
-    <div class="w3-top w3-light-grey" style="color:black">
+    <div class="w3-top w3-light-grey w3-hide-small" style="color:black">
         <ul class="w3-navbar" id="myNav">
             <li><a href="{{ url_for('home') }}" class="w3-padding-large">HOME</a></li>
-            <li class="w3-hide-small"><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
-            <li class="w3-hide-small"><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
-            <li class="w3-hide-small"><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
-            <li class="w3-hide-small w3-disabled"><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
+            <li><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
+            <li><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
+            <li><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
+            <li class="w3-disabled"><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
         </ul>
     </div>
+
+    <!-- Navbar (Small Screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" style="color:white">
+        <ul class="w3-navbar" id="myNavSmall">
+            <li><a href="{{ url_for('home') }}" class="w3-padding-large">HOME</a></li>
+            <li><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
+            <li><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
+            <li><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
+            <li><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
+        </ul>
+    </div>
+
     <div class="w3-content w3-container w3-padding-64">
         <h3 class="w3-center">CONTACT ME</h3>
         <p class="w3-center"><em>I'd love to hear from you!</em></p>
