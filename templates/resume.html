@@ -58,14 +58,24 @@
     HEADER
     ============================ -->
     <!-- Navbar -->
-
-    <div class="w3-top-static" style="color:black">
+    <div class="w3-top-static w3-hide-small" style="color:black">
         <ul class="w3-navbar" id="myNav">
             <li><a href="{{ url_for('home') }}" class="w3-padding-large">HOME</a></li>
-            <li class="w3-hide-small"><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
-            <li class="w3-hide-small w3-disabled"><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
-            <li class="w3-hide-small"><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
-            <li class="w3-hide-small"><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
+            <li><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
+            <li class="w3-disabled"><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
+            <li><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
+            <li><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- Navbar (Small Screens) -->
+    <div class="w3-top-static w3-hide-large w3-hide-medium" style="color:white">
+        <ul class="w3-navbar" id="myNavSmall">
+            <li><a href="{{ url_for('home') }}" class="w3-padding-large">HOME</a></li>
+            <li><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
+            <li><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
+            <li><a href="{{ url_for('blog') }}" class="w3-padding-large">BLOG</a></li>
+            <li><a href="{{ url_for('contact') }}" class="w3-padding-large">CONTACT</a></li>
         </ul>
     </div>
 
@@ -95,7 +105,7 @@
                         </li>
                         <li><a href="mailto:tyler.snielson@gmail.com.com"><span class="social fa fa-envelope-o"></span>tyler.snielson@gmail.com</a>
                         </li>
-                        <li><a href="#"><span class="social fa fa-file-text"></span>Link to full resume</a></li>
+                        <li><a href="{{ url_for('full_resume') }}"><span class="social fa fa-file-text"></span>Link to full resume</a></li>
                     </ul>
                 </div><!-- social 1st col end-->
                 <div class="col-sm-offset-2">
@@ -154,7 +164,7 @@
                         </p>
                     </div>
                     <div class="col-md-3 year">
-                        <p>March 2017 - Present</p>
+                        <p>March 2017 - August 2017</p>
                     </div>
                 </div><!--Job 1 end-->
 
