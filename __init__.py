@@ -54,5 +54,10 @@ def resume():
     return render_template('/resume.html')
 
 
+@app.route('/resume/fullresume')
+def full_resume():
+    return send_file('/var/www/mywebsite/mywebsite/templates/full_resume.pdf', as_attachment=True)
+
+
 if __name__ == '__main__':
     app.run()
