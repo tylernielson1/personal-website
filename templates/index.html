@@ -29,8 +29,8 @@
         </div>
 
         <!-- Navbar (Small Screens) -->
-        <div class="w3-top-static w3-hide-large w3-hide-medium" style="color:white">
-            <ul class="w3-navbar" id="myNavSmall">
+        <div id="myNavSmall" class="w3-top-static w3-hide-large w3-hide-medium" style="color:gray">
+            <ul class="w3-navbar">
                 <li><a href="{{ url_for('home') }}" class="w3-padding-large">HOME</a></li>
                 <li><a href="{{ url_for('about') }}" class="w3-padding-large">ABOUT ME</a></li>
                 <li><a href="{{ url_for('resume') }}" class="w3-padding-large">RESUME</a></li>
@@ -92,6 +92,11 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="static/js/bootstrap.min.js"></script>
+        <script>
+            function navBarAnimate() {
+
+            }
+        </script>
 
     </body>
 </html>
