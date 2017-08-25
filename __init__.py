@@ -54,10 +54,5 @@ def resume():
     return render_template('/resume.html')
 
 
-@app.route('/resume/fullresume.pdf')
-def full_resume():
-	with open('/full_resume.pdf', 'rb') as resume:
-		return send_file(resume, attachment_filename='full_resume.pdf')
-
 if __name__ == '__main__':
     app.run()
